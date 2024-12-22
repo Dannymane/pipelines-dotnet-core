@@ -3,12 +3,16 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+# Trigger: The pipeline will automatically run when changes are pushed to the master branch.
 trigger:
 - master
 
+# Pool: The pipeline will run on the default pool.
 pool:
   name: default
 
+# Steps: The pipeline will run two steps. The first step will run a one-line script that prints "Hello, world!".
+#The second step will run a multi-line script that prints a message and a link to the YAML documentation.
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
